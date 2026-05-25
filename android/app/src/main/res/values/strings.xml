@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">メンコン絵文字</string>
+    <string name="app_name_full">メンコン絵文字変換ツール</string>
+    <string name="notification_listener_label">LINE暗号検知（メンコン絵文字）</string>
+</resources>

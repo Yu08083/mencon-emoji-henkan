@@ -1,0 +1,55 @@
+.ctrl-btn {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border: 1.5px solid var(--line);
+  transition: all var(--t-fast), transform var(--t-bounce);
+  font-family: var(--font-body);
+}
+
+.ctrl-btn:hover {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.ctrl-btn:active { transform: scale(0.95); }
+
+.ctrl-btn.active-edit {
+  background: var(--gradient-button);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 3px 10px rgba(255, 77, 151, 0.35);
+}
+
+.reset-btn { color: var(--danger); border-color: var(--danger-bg); }
+.reset-btn:hover { background: var(--danger-bg); border-color: var(--danger); color: var(--danger); }
+
+.fav-load-btn { color: var(--accent-strong); }
+.fav-del-btn { color: var(--danger); }
+
+.primary-btn {
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--gradient-button);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  border: none;
+  box-shadow: 0 4px 14px rgba(255, 77, 151, 0.4);
+  transition: all var(--t-fast), transform var(--t-bounce);
+}
+
+.primary-btn:hover {
+  background: var(--gradient-button-hover);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(255, 77, 151, 0.55);
+}
+
+.primary-btn:active { transform: scale(0.96); }

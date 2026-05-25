@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://yu08083.github.io/mencon-emoji-henkan/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://yu08083.github.io/mencon-emoji-henkan/assets/ogp.png?v=3</image:loc>
+      <image:title>メンコン絵文字変換ツール</image:title>
+      <image:caption>ひらがな・カタカナを絵文字に変換する暗号ツール</image:caption>
+    </image:image>
+  </url>
+</urlset>

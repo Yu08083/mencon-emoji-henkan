@@ -1,0 +1,72 @@
+.card {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 18px;
+  border: 1.5px solid var(--line);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 16px; right: 16px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 0 0 4px 4px;
+  opacity: 0.85;
+}
+
+.card::after {
+  content: '✨';
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 16px;
+  opacity: 0.6;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(1) rotate(0); }
+  50%      { opacity: 0.9; transform: scale(1.2) rotate(15deg); }
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 22px;
+  background: var(--surface-2);
+  padding: 5px;
+  border-radius: var(--radius-md);
+  position: relative;
+  border: 1.5px solid var(--line);
+}
+
+.tab {
+  flex: 1;
+  padding: 11px 0;
+  border-radius: calc(var(--radius-md) - 5px);
+  background: transparent;
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  transition: background var(--t-fast), color var(--t-fast), box-shadow var(--t-fast), transform var(--t-fast);
+}
+
+.tab.active {
+  background: var(--gradient-button);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 77, 151, 0.35);
+  transform: translateY(-1px);
+}
+
+.tab:not(.active):hover {
+  color: var(--accent);
+  background: var(--accent-bg);
+}

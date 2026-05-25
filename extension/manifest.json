@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "メンコン絵文字変換ツール — LINE暗号を自動翻訳",
+  "short_name": "メンコン絵文字",
+  "version": "1.0.0",
+  "description": "メンコン界隈で人気の絵文字暗号を、LINE Web版で受信した瞬間に自動で翻訳して表示します。",
+  "default_locale": "ja",
+
+  "permissions": ["storage", "contextMenus", "activeTab"],
+
+  "host_permissions": [
+    "https://chat.line.biz/*",
+    "https://line.me/*",
+    "https://*.line.me/*",
+    "https://*.line.biz/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+
+  "action": {
+    "default_title": "メンコン絵文字変換ツール",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+
+  "content_scripts": [{
+    "matches": [
+      "https://chat.line.biz/*",
+      "https://line.me/*",
+      "https://*.line.me/*"
+    ],
+    "js": ["content/content.js"],
+    "css": ["content/content.css"],
+    "run_at": "document_idle",
+    "all_frames": true
+  }],
+
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+
+  "web_accessible_resources": [{
+    "resources": ["icons/*.png"],
+    "matches": ["https://*.line.me/*", "https://*.line.biz/*"]
+  }]
+}

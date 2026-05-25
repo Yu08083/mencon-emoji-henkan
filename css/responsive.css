@@ -1,0 +1,27 @@
+@media (max-width: 480px) {
+  .container { max-width: 100%; }
+
+  .card, .table-card { padding: 18px 16px; }
+
+  .title { font-size: 1.4rem; }
+  .subtitle { font-size: 0.7rem; }
+
+  textarea { font-size: 1.1rem; min-height: 76px; }
+  .output-box { font-size: 1.25rem; }
+  .output-box.text-output { font-size: 1.15rem; }
+
+  .cipher-grid { gap: 4px; }
+  .cipher-cell { padding: 7px 2px; min-height: 52px; }
+  .cipher-emoji { font-size: 1.15rem; }
+  .cipher-kana { font-size: 0.72rem; }
+
+  .table-controls { gap: 6px; }
+  .ctrl-btn { padding: 6px 10px; font-size: 0.72rem; }
+
+  .modal-panel { padding: 20px 16px; }
+  .modal-title { font-size: 1rem; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container { max-width: 540px; }
+}

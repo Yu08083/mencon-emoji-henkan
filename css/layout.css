@@ -1,0 +1,71 @@
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(20px, 4vw, 36px) 16px 80px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(255, 126, 176, 0.40) 0%, transparent 40%),
+    radial-gradient(circle at 88% 28%, rgba(203, 161, 255, 0.40) 0%, transparent 38%),
+    radial-gradient(circle at 22% 84%, rgba(255, 200, 224, 0.35) 0%, transparent 42%),
+    radial-gradient(circle at 78% 88%, rgba(176, 121, 255, 0.32) 0%, transparent 36%);
+  filter: blur(8px);
+}
+
+body::after {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='%23ffffff' opacity='0.9'><circle cx='15' cy='22' r='0.9'/><circle cx='85' cy='40' r='0.6'/><circle cx='45' cy='75' r='0.7'/><circle cx='70' cy='12' r='0.5'/><circle cx='28' cy='58' r='0.8'/><circle cx='92' cy='80' r='0.7'/><circle cx='8' cy='90' r='0.6'/><circle cx='55' cy='30' r='0.5'/></g></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='%23ffd84a' opacity='0.75'><path d='M50 20l2 6 6 2-6 2-2 6-2-6-6-2 6-2z'/><path d='M20 70l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5z'/><path d='M80 60l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2z'/></g></svg>");
+  background-size: 320px 320px, 240px 240px;
+  background-position: 0 0, 80px 100px;
+  opacity: 0.8;
+  animation: sparkle-drift 22s linear infinite;
+}
+
+[data-theme="dark"] body::after { opacity: 0.95; }
+
+@keyframes sparkle-drift {
+  0%   { background-position: 0 0, 80px 100px; }
+  100% { background-position: 320px 320px, 400px 420px; }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+}
+
+.float-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 4px 8px rgba(255, 77, 151, 0.3));
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+.float-deco.deco-1 { top: -10px; left: -8px; font-size: 28px; animation-delay: -0.5s; }
+.float-deco.deco-2 { top: 40px; right: -16px; font-size: 24px; animation-delay: -2s; }
+.float-deco.deco-3 { bottom: 80px; left: -18px; font-size: 30px; animation-delay: -1s; }
+.float-deco.deco-4 { bottom: 40px; right: -10px; font-size: 22px; animation-delay: -3s; }
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50%      { transform: translateY(-12px) rotate(4deg); }
+}

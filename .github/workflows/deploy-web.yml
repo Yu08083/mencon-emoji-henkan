@@ -1,0 +1,67 @@
+# =============================================================
+#  メンコン絵文字変換ツール — Web版をGitHub Pagesに自動デプロイ
+# =============================================================
+
+name: Deploy Web to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'manifest.webmanifest'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'css/**'
+      - 'js/**'
+      - 'favicon/**'
+      - 'assets/**'
+      - '.well-known/**'
+      - '.github/workflows/deploy-web.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage web files
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp manifest.webmanifest _site/
+          cp robots.txt _site/
+          cp sitemap.xml _site/
+          cp -r css _site/
+          cp -r js _site/
+          cp -r favicon _site/
+          cp -r assets _site/
+          if [ -d .well-known ]; then cp -r .well-known _site/; fi
+          cp index.html _site/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

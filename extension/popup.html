@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>メンコン絵文字</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+<div class="popup-root">
+  <header class="popup-header">
+    <div class="popup-title">
+      <span class="popup-icon">🔓</span>
+      <div>
+        <div class="popup-title-text">メンコン絵文字</div>
+        <div class="popup-subtitle">LINE Webで自動復号</div>
+      </div>
+    </div>
+    <label class="switch" title="拡張機能の有効/無効">
+      <input type="checkbox" id="toggle-enabled" />
+      <span class="switch-slider"></span>
+    </label>
+  </header>
+
+  <section class="popup-card">
+    <div class="popup-tabs">
+      <button class="popup-tab active" data-mode="decode" type="button">絵文字 → 文字</button>
+      <button class="popup-tab" data-mode="encode" type="button">文字 → 絵文字</button>
+    </div>
+
+    <textarea id="input" rows="3" placeholder="ここに貼り付け…" spellcheck="false"></textarea>
+    <div class="popup-arrow">↓</div>
+    <div class="popup-output-wrap">
+      <div id="output" class="popup-output"></div>
+      <button id="copy-btn" class="popup-copy-btn" type="button">コピー</button>
+    </div>
+  </section>
+
+  <section class="popup-card popup-card-compact">
+    <div class="popup-row">
+      <button id="open-editor" class="popup-link" type="button">⚙️ 暗号表を編集</button>
+      <button id="share-cipher" class="popup-link" type="button">⤴ 共有URLをコピー</button>
+    </div>
+    <div class="popup-row">
+      <button id="import-url" class="popup-link" type="button">📥 URLから取り込む</button>
+      <a class="popup-link" href="https://yu08083.github.io/mencon-emoji-henkan/" target="_blank" rel="noopener">🌐 Web版を開く</a>
+    </div>
+  </section>
+
+  <div id="status" class="popup-status" role="status"></div>
+
+  <footer class="popup-footer">
+    💡 入力欄で <kbd>Alt</kbd>+<kbd>E</kbd> で書いた文字を暗号化
+  </footer>
+</div>
+
+<div id="editor-modal" class="popup-modal" hidden>
+  <div class="popup-modal-panel">
+    <header class="popup-modal-header">
+      <span>暗号表を編集</span>
+      <button id="editor-close" type="button" aria-label="閉じる">×</button>
+    </header>
+    <div class="popup-modal-body">
+      <p class="popup-note">セルをクリックして編集</p>
+      <div id="cipher-grid" class="popup-cipher-grid"></div>
+      <div class="popup-modal-actions">
+        <button id="reset-cipher" class="popup-btn-secondary" type="button">初期化</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="import-modal" class="popup-modal" hidden>
+  <div class="popup-modal-panel">
+    <header class="popup-modal-header">
+      <span>共有URLを取り込む</span>
+      <button id="import-close" type="button" aria-label="閉じる">×</button>
+    </header>
+    <div class="popup-modal-body">
+      <p class="popup-note">Web版や他デバイスでコピーした暗号表URLを貼り付け</p>
+      <textarea id="import-url-input" rows="3" placeholder="https://yu08083.github.io/mencon-emoji-henkan/#cipher=..."></textarea>
+      <div class="popup-modal-actions">
+        <button id="import-confirm" class="popup-btn-primary" type="button">取り込む</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="popup.js" type="module"></script>
+</body>
+</html>

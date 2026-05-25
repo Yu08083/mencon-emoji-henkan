@@ -1,0 +1,115 @@
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  background: var(--surface-2);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-md);
+  font-size: 1.18rem;
+  line-height: 1.7;
+  padding: 14px 16px;
+  resize: vertical;
+  min-height: 92px;
+  transition: border-color var(--t-fast), background var(--t-fast), box-shadow var(--t-fast);
+  outline: none;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+textarea:focus {
+  border-color: var(--accent);
+  background: var(--surface-pop);
+  box-shadow: 0 0 0 4px var(--accent-bg);
+}
+
+textarea::placeholder {
+  color: var(--ink-faint);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.arrow {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 14px 0;
+  letter-spacing: 0.3em;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: 900;
+  animation: bounce-down 1.8s ease-in-out infinite;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50%      { transform: translateY(4px); opacity: 1; }
+}
+
+.output-wrap { position: relative; }
+
+.output-box {
+  background: var(--gradient-soft);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px 90px 16px 18px;
+  min-height: 72px;
+  font-size: 1.45rem;
+  line-height: 1.9;
+  word-break: break-word;
+  white-space: pre-wrap;
+  color: var(--ink);
+  position: relative;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+
+.output-box:has(.output-text) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-bg);
+}
+
+.output-box.text-output { font-size: 1.25rem; font-weight: 600; }
+
+.output-text {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.placeholder-text {
+  color: var(--ink-faint);
+  font-size: 0.92rem;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--gradient-button);
+  border: none;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 7px 14px;
+  letter-spacing: 0.06em;
+  transition: transform var(--t-bounce), box-shadow var(--t-fast), background var(--t-fast);
+  box-shadow: 0 3px 10px rgba(255, 77, 151, 0.35);
+}
+
+.copy-btn:hover {
+  background: var(--gradient-button-hover);
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: 0 5px 14px rgba(255, 77, 151, 0.5);
+}
+
+.copy-btn:active { transform: scale(0.94); }
+
+.copy-btn.copied {
+  background: var(--success);
+  box-shadow: 0 3px 10px rgba(78, 195, 154, 0.4);
+}

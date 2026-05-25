@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["TEAMID.com.emojicode.app"],
+        "components": [
+          {
+            "/": "/emoji-code-pro/*",
+            "comment": "Open Emoji Code Pro app when this URL pattern matches"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TEAMID.com.emojicode.app"]
+  }
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<title>メンコン絵文字変換ツール｜LINEで使える絵文字暗号メーカー</title>
+<meta name="description" content="メンコン（メンヘラコンテンツ）の絵文字暗号を瞬時に変換できる無料ツール。ひらがな・カタカナを絵文字に暗号化、絵文字メッセージを復号、QRコードで暗号表を友達と共有。Android・iOSアプリ・ブラウザ拡張機能対応。" />
+<meta name="keywords" content="メンコン,絵文字変換,絵文字暗号,LINE,暗号メーカー,絵文字翻訳,メンヘラ,暗号文,絵文字コード,emoji code,emoji cipher,カタカナ絵文字変換" />
+<meta name="author" content="@yu_" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="googlebot" content="index, follow" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="#ff4d97" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#9a5bff" media="(prefers-color-scheme: dark)" />
+<meta name="application-name" content="メンコン絵文字変換ツール" />
+<link rel="canonical" href="https://yu08083.github.io/mencon-emoji-henkan/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="メンコン絵文字変換ツール" />
+<meta property="og:title" content="メンコン絵文字変換ツール｜LINEで使える絵文字暗号メーカー" />
+<meta property="og:description" content="ひらがなを絵文字に、絵文字をひらがなに。メンコン界隈で流行りの絵文字暗号を瞬時に変換。QR共有・LINE自動検知・全プラットフォーム対応。" />
+<meta property="og:url" content="https://yu08083.github.io/mencon-emoji-henkan/" />
+<meta property="og:image" content="https://yu08083.github.io/mencon-emoji-henkan/assets/ogp.png?v=3" />
+<meta property="og:image:secure_url" content="https://yu08083.github.io/mencon-emoji-henkan/assets/ogp.png?v=3" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="メンコン絵文字変換ツール - LINEで使える絵文字暗号メーカー" />
+<meta property="og:locale" content="ja_JP" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@yu_" />
+<meta name="twitter:creator" content="@yu_" />
+<meta name="twitter:title" content="メンコン絵文字変換ツール｜LINEで使える絵文字暗号メーカー" />
+<meta name="twitter:description" content="ひらがなを絵文字に、絵文字をひらがなに。メンコン界隈で流行りの絵文字暗号を瞬時に変換。QR共有・LINE自動検知・全プラットフォーム対応。" />
+<meta name="twitter:image" content="https://yu08083.github.io/mencon-emoji-henkan/assets/ogp.png?v=3" />
+<meta name="twitter:image:alt" content="メンコン絵文字変換ツール - LINEで使える絵文字暗号メーカー" />
+
+<link rel="icon" href="./favicon/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="48x48" href="./favicon/favicon-48x48.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="./favicon/favicon-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon/favicon-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+<link rel="manifest" href="./manifest.webmanifest" />
+<meta name="apple-mobile-web-app-title" content="メンコン絵文字" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="mobile-web-app-capable" content="yes" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link rel="stylesheet" href="./css/index.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "メンコン絵文字変換ツール",
+  "alternateName": ["メンコン絵文字", "絵文字暗号メーカー", "Emoji Cipher Maker"],
+  "url": "https://yu08083.github.io/mencon-emoji-henkan/",
+  "description": "ひらがな・カタカナを絵文字に変換する暗号ツール。LINEで使えるメンコンの絵文字暗号を瞬時に作成・解読できます。",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any (Web, Android, iOS, Browser Extension)",
+  "browserRequirements": "Requires JavaScript",
+  "inLanguage": "ja",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "yu_",
+    "url": "https://twitter.com/yu_",
+    "sameAs": ["https://twitter.com/yu_"]
+  },
+  "image": "https://yu08083.github.io/mencon-emoji-henkan/assets/ogp.png?v=3",
+  "screenshot": "https://yu08083.github.io/mencon-emoji-henkan/assets/ogp.png?v=3"
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <div class="title-block">
+      <h1 class="title">
+        <span class="title-deco" aria-hidden="true">💕</span><span class="title-main">メンコン絵文字変換ツール</span>
+      </h1>
+      <p class="subtitle">EMOJI ⇄ KANA CIPHER MAKER</p>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="share-btn" title="暗号表を共有" aria-label="暗号表を共有">⤴</button>
+      <button class="icon-btn" id="theme-toggle" title="テーマ切替" aria-label="テーマ切替">☾</button>
+    </div>
+  </header>
+
+  <section class="card" aria-labelledby="converter-heading">
+    <h2 id="converter-heading" class="visually-hidden">絵文字変換</h2>
+    <div class="mode-tabs" role="tablist">
+      <button class="tab active" data-mode="decode" role="tab" aria-selected="true">絵文字 → 文字</button>
+      <button class="tab" data-mode="encode" role="tab" aria-selected="false">文字 → 絵文字</button>
+    </div>
+
+    <div id="decode-section">
+      <label for="decode-input">入力（絵文字を貼り付け）</label>
+      <textarea
+        id="decode-input"
+        placeholder='例：🍨🦑4️⃣✋🇷🇴'
+        rows="3" autocapitalize="off" autocorrect="off" spellcheck="false"
+      ></textarea>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <label>変換結果</label>
+      <div class="output-wrap">
+        <div class="output-box text-output" id="decode-output">
+          <span class="placeholder-text">ここに文字が表示されます</span>
+        </div>
+        <button class="copy-btn" data-copy-target="#decode-output">コピー</button>
+      </div>
+    </div>
+
+    <div id="encode-section" style="display:none">
+      <label for="encode-input">入力（ひらがな・カタカナ）</label>
+      <textarea id="encode-input" placeholder="例：あいしてる" rows="3"></textarea>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <label>変換結果</label>
+      <div class="output-wrap">
+        <div class="output-box" id="encode-output">
+          <span class="placeholder-text">ここに絵文字が表示されます</span>
+        </div>
+        <button class="copy-btn" data-copy-target="#encode-output">コピー</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="table-card history-card">
+    <div class="table-header" id="history-header">
+      <div class="table-title">
+        <span class="table-title-glyph">H</span>
+        履歴
+      </div>
+      <div>
+        <button class="ctrl-btn" id="history-clear" title="履歴を消去">消去</button>
+        <span class="toggle-icon" id="history-toggle-icon">▼</span>
+      </div>
+    </div>
+    <div id="history-body" style="display:none">
+      <div id="history-list"></div>
+    </div>
+  </section>
+
+  <section class="table-card">
+    <div class="table-header" id="table-header">
+      <div class="table-title">
+        <span class="table-title-glyph">表</span>
+        暗号表を見る・編集する
+      </div>
+      <span class="toggle-icon" id="toggle-icon">▼</span>
+    </div>
+
+    <div id="table-body" style="display:none">
+      <div class="dakuten-note">
+        💡 濁点・半濁点のある文字（が、ば、ぱ など）は、元の絵文字の後ろに
+        <strong>"</strong> または <strong>'</strong> をつけます。<br>
+        例：あいしてる → 🍨🦑4️⃣✋🇷🇴
+      </div>
+
+      <div class="table-controls">
+        <button class="ctrl-btn" id="edit-btn">カスタマイズ</button>
+        <button class="ctrl-btn reset-btn" id="reset-btn" style="display:none">デフォルトに戻す</button>
+      </div>
+
+      <div class="cipher-grid" id="cipher-grid"></div>
+
+      <div class="section">
+        <div class="section-header">
+          <span class="section-title">＋ 特殊文字の変換</span>
+          <button class="ctrl-btn" id="add-custom-btn">追加</button>
+        </div>
+        <div id="custom-chars-list"></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title" style="margin-bottom:10px">★ お気に入り設定</div>
+        <div class="save-row">
+          <input type="text" id="fav-name-input" class="fav-name-input"
+                 placeholder="設定に名前をつけて保存" />
+          <button class="ctrl-btn fav-save-btn" id="fav-save-btn">保存</button>
+        </div>
+        <div id="favorites-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="platform-links">
+      <span class="platform-tag">📱 Android</span>
+      <span class="platform-tag">📱 iOS</span>
+      <span class="platform-tag">🌐 Web</span>
+      <span class="platform-tag">🧩 拡張機能</span>
+    </div>
+    <div class="author-credit">
+      作者
+      <a href="https://twitter.com/yu_" target="_blank" rel="noopener me author">
+        <span aria-hidden="true">𝕏</span> @yu_
+      </a>
+    </div>
+    <div style="margin-top:8px; font-size: 0.72rem; opacity: 0.75;">
+      暗号表は端末内のみに保存されます ・ 通信は一切ありません
+    </div>
+  </footer>
+</div>
+
+<div class="modal" id="share-modal" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+  <div class="modal-backdrop" id="share-modal-backdrop"></div>
+  <div class="modal-panel">
+    <button class="modal-close" id="share-modal-close" aria-label="閉じる">×</button>
+    <div class="modal-title" id="share-modal-title">💕 暗号表をシェア</div>
+    <div class="modal-subtitle">QRをアプリで読み取るか、URLをコピーして渡してね</div>
+
+    <div class="share-qr" id="share-qr"></div>
+
+    <div class="share-url-label">URL</div>
+    <div class="output-wrap">
+      <div class="share-url-box mono" id="share-url"></div>
+      <button class="copy-btn share-url-copy" id="share-url-copy">コピー</button>
+    </div>
+
+    <div class="share-hint">
+      📱 <strong>Androidアプリ</strong>でこのURLを開くか、QRをスキャンすると同じ暗号表が取り込まれます。<br>
+      🧩 <strong>ブラウザ拡張</strong>のポップアップにも貼り付け可能です。
+    </div>
+  </div>
+</div>
+
+<style>
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+</style>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

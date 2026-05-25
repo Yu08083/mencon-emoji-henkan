@@ -1,0 +1,20 @@
+{
+  "name": "メンコン絵文字変換ツール",
+  "short_name": "メンコン絵文字",
+  "description": "ひらがな・カタカナを絵文字に変換する暗号ツール。LINEで使えるメンコンの絵文字暗号を瞬時に変換・解読できます。",
+  "lang": "ja",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffeaf3",
+  "theme_color": "#ff4d97",
+  "categories": ["utilities", "social", "lifestyle"],
+  "icons": [
+    { "src": "./favicon/favicon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./favicon/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "./favicon/favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./favicon/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

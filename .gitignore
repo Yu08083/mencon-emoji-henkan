@@ -1,0 +1,33 @@
+# =========== OS ===========
+.DS_Store
+Thumbs.db
+
+# =========== Editors ===========
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# =========== Web ===========
+node_modules/
+_site/
+
+# =========== Android ===========
+android/.gradle/
+android/.idea/
+android/local.properties
+android/captures/
+android/app/build/
+android/build/
+android/.cxx/
+
+# =========== iOS ===========
+ios/build/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcworkspace/xcuserdata/
+ios/DerivedData/
+ios/Pods/
+
+# =========== Extension ===========
+extension/*.zip
+extension/*.crx
