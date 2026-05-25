@@ -189,5 +189,3 @@ https://yu08083.github.io/mencon-emoji-henkan/#cipher=BASE64URL(JSON({v,c,x}))
 ## 📜 ライセンス
 
 MIT License — 詳細は [LICENSE](LICENSE) を参照
-
-オリジナルの暗号表設計は [Emoji-code](https://github.com/sehika/Emoji-code) を参考にしています。
